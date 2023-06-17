@@ -1,4 +1,4 @@
-# Install Packages with Latest Version
+# Install Packages with Latest Version ( Using this packages you get Coverage / Gas Report )
 
 # Dev-Dependencies
 
@@ -8,9 +8,7 @@
 
 npm i @openzeppelin/contracts
 
-# Using this packages you get Coverage / Gas Report
-
---
+---
 
 # Ethereum Network
 
