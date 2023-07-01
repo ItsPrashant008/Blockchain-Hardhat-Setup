@@ -1,9 +1,9 @@
-UsingUsing these packages are used in a project, like in testing, configs, contract, scripts. For those no need to use any additional package for right and test smart contract. After these packages you check code coverage, contract size, contract and methods gas fee/ price in usd etc.
+Using these packages are used in a project, like in testing, configs, contract, scripts. For those no need to use any additional package for right and test smart contract. After these packages you check code coverage, contract size, contract and methods gas fee/ price in usd etc.
 
 <b> Take a Clone or Setup</b>
 
 # Install Packages with Latest Version ( Using this packages you get Coverage / Gas Report )
--- 
+--
 
 # Setps
 
