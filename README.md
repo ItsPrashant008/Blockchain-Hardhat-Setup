@@ -1,12 +1,46 @@
+UsingUsing these packages are used in a project, like in testing, configs, contract, scripts. For those no need to use any additional package for right and test smart contract. After these packages you check code coverage, contract size, contract and methods gas fee/ price in usd etc.
+
+<b> Take a Clone or Setup</b>
+
 # Install Packages with Latest Version ( Using this packages you get Coverage / Gas Report )
+
+    npm init -y
 
 # Dev-Dependencies
 
-    npm i --save-dev @nomicfoundation/hardhat-chai-matchers @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-toolbox @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-solhint @nomiclabs/hardhat-waffle @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades @typechain/ethers-v5 @typechain/hardhat @types/chai @types/mocha @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser chai chai-bignumber chai-bn dotenv eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise ethereum-waffle ethers hardhat hardhat-contract-sizer hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage ts-node typechain typescript
+    npm i --save-dev @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-solhint  @nomicfoundation/hardhat-network-helpers @openzeppelin/hardhat-upgrades  @openzeppelin/contracts-upgradeable @types/chai @types/mocha @types/node chai chai-bignumber chai-bn dotenv eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise ethereum-waffle ethers hardhat hardhat-contract-sizer hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage ts-node typescript typechain @typechain/ethers-v5 @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
 # Dependency
 
-npm i @openzeppelin/contracts
+    npm i @openzeppelin/contracts
+
+# Dev-Dependencies
+
+    npm i --save-dev @nomicfoundation/hardhat-toolbox @typechain/hardhat --force
+
+--
+
+# Setps
+
+    npx hardhat
+
+<!-- Choose script, I choose Typescript -->
+<!-- Add .git ignore -->
+<!-- No need to install hardhat-toolbox -->
+
+    npx hardhat compile
+
+    npx hardhat test
+
+# Then, Add Test, Contract, Hardhat Config and Env files and Run testcases
+
+    npx hardhat clean
+
+    npx hardhat compile
+
+    npx hardhat test
+
+<!-- After Successfully run test case you can use this setup as per you code/contract -->
 
 ---
 
@@ -46,7 +80,7 @@ Polygon Network
 Deploy: npx hardhat run --network polygon_mumbai scripts/deploy.ts
 Verify: npx hardhat verify --network polygon_mumbai <token.address>
 
-#################################### Mainnet Network ####################################
+# -------- Mainnet Network --------
 
     Network Name: Polygon Mainnet
     New RPC URL: https://polygon-rpc.com/
