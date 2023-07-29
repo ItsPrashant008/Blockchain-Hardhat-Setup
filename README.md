@@ -4,8 +4,6 @@ If you are setting up by cloning, please remove the "@nomicfoundation/hardhat-to
 
     npm install --save
 
-    npm i @openzeppelin/contracts @openzeppelin/hardhat-upgrades@1.28.0 @openzeppelin/contracts-upgradeable
-
     npm i --save-dev @nomicfoundation/hardhat-toolbox @typechain/hardhat --force
 
 ---
