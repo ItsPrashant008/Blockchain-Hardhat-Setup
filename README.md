@@ -20,11 +20,11 @@ These packages will help you in both small and large projects. They will assist 
 
 <b> Dependencies </b>
 
-npm i --save-dev @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-solhint @nomicfoundation/hardhat-network-helpers @types/chai @types/mocha @types/node chai chai-bignumber chai-bn dotenv eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise ethereum-waffle ethers hardhat hardhat-contract-sizer hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage ts-node typescript typechain @typechain/ethers-v5 @typescript-eslint/eslint-plugin @typescript-eslint/parser
+    npm i --save-dev @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-solhint @nomicfoundation/hardhat-network-helpers @types/chai @types/mocha @types/node chai chai-bignumber chai-bn dotenv eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise ethereum-waffle ethers hardhat hardhat-contract-sizer hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage ts-node typescript typechain @typechain/ethers-v5 @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
-npm i @openzeppelin/contracts @openzeppelin/hardhat-upgrades@1.28.0 @openzeppelin/contracts-upgradeable
+    npm i @openzeppelin/contracts @openzeppelin/hardhat-upgrades@1.28.0 @openzeppelin/contracts-upgradeable
 
-npm i --save-dev @nomicfoundation/hardhat-toolbox @typechain/hardhat --force
+    npm i --save-dev @nomicfoundation/hardhat-toolbox @typechain/hardhat --force
 
 ---
 
