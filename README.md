@@ -1,32 +1,31 @@
 If you are setting up by cloning, please remove the "@nomicfoundation/hardhat-toolbox" and "@typechain/hardhat" packages from the package.json because they might not install correctly due to different package versions. After removing them, make sure to add "--force install" at the end to forcefully install all the packages.
 
-# Install Package
-
-    npm install --save
-
-    npm i --save-dev @nomicfoundation/hardhat-toolbox @typechain/hardhat --force
-
 ---
 
 These packages will help you in both small and large projects. They will assist you in testing, generating code coverage, determining contract size, and calculating contract gas fees/prices in USD.
 
 <h1> If you want to set up the app from scratch, follow these steps: </h1>
 
-# Install Packages with Latest Version
+# Install Packages with Latest Version of Hardhat and Openzeppelin
 
 <b> Create Package.json file </b>
 
     npm init -y
 
+<b> Or Clean Cache </b>
+
+    npm cache clean --force
+
 <b> Dependencies </b>
 
-    npm i --save-dev @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-solhint @nomicfoundation/hardhat-network-helpers @types/chai @types/mocha @types/node chai chai-bignumber chai-bn dotenv eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise ethereum-waffle ethers hardhat hardhat-contract-sizer hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage ts-node typescript typechain @typechain/ethers-v5 @typescript-eslint/eslint-plugin @typescript-eslint/parser
+    npm install --save
+    
+    npm install --save-dev hardhat  @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades
 
-    npm i @openzeppelin/contracts @openzeppelin/hardhat-upgrades@1.28.0 @openzeppelin/contracts-upgradeable
-
-    npm i --save-dev @nomicfoundation/hardhat-toolbox @typechain/hardhat --force
+    npm install --save @openzeppelin/contracts
 
 ---
+
 
 # For Hardhat Setps
 
