@@ -29,6 +29,11 @@ const config: HardhatUserConfig = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+     sepolia: {
+      url: process.env.ALCHEMY_SEPOLIA_API_KEY,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
     hardhat: {},
 
     polygon_mumbai: {
