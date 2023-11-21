@@ -64,7 +64,7 @@ Make a copy of env_example named .env.
 
 You can also modify any of the optional environment variables if you'd wish, but the defaults should work perfectly well.
 
---
+---
 
 ### Hardhat Config
 
@@ -78,10 +78,9 @@ You will get the ETHERSCAN API KEY from etherscan.io, for which you need to log 
 
 #### ALCHEMY_GOERLI_API_KEY
 
-You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Infura. You have the option to create an API key from Alchemy based on your network preferences by visiting https://dashboard.alchemy.com/. Moreover, you can also use Alchemy's "faucet" feature to get test Ether for your Goerli network or other network. </span>
+You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Infura. You have the option to create an API key from Alchemy based on your network preferences by visiting https://dashboard.alchemy.com/. Moreover, you can also use Alchemy's "faucet" feature to get test Ether for your Goerli network or other network.
 
-<p> PRIVATE_KEY </p>: 
-<span> You can obtain your private key from your public address in MetaMask. <span>
+PRIVATE_KEY : You can obtain your private key from your public address in MetaMask.
 
 #### Then, Test your Smart contract
 
