@@ -1,8 +1,8 @@
 ## Simply Setup Hardhat
 
-    These packages will help you in both small and large projects. They will assist you in testing, generating code coverage, determining contract size, and calculating contract gas fees/prices in USD.
+These packages will help you in both small and large projects. They will assist you in testing, generating code coverage, determining contract size, and calculating contract gas fees/prices in USD.
 
-    If you are setting up by cloning, please remove the "@nomicfoundation/hardhat-toolbox" and "@typechain/hardhat" packages from the package.json because they might not install correctly due to different package versions. After removing them, make sure to add "--force install" at the end to forcefully install all the packages. </p>
+If you are setting up by cloning, please remove the "@nomicfoundation/hardhat-toolbox" and "@typechain/hardhat" packages from the package.json because they might not install correctly due to different package versions. After removing them, make sure to add "--force install" at the end to forcefully install all the packages. </p>
 
 ---
 
@@ -16,7 +16,7 @@
 
 <b> Update Important Packages like: Hardhat and Openzeppelin: </b>
 
-    npm install --save-dev hardhat  @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades
+    npm install --save-dev hardhat @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades
 
 ### If you want to set up the hardhat from scratch, follow these steps-
 
@@ -43,15 +43,17 @@ So make sure to check your package's compatibility with other packages and use t
 
     npm install --save @openzeppelin/contracts @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades@1.28.0
 
-<b> For Hardhat Setps: <b>
+## For Hardhat Setps: 
 
     npx hardhat
 
-<b> Choose script, _I choose Typescript_ </b>
+<b> Choose script, I choose Typescript </b>
 <b> Add .git ignore </b>
 <b> No need to install hardhat-toolbox, or ignore this package </b>
 
-#### You can remove the existing contracts, testing files, and scripts from the project and replace them with your own contracts, tests, and scripts or you can use mine.
+<b> You can remove the existing contracts, testing files, and scripts from the project and replace them with your own contracts, tests, and scripts or you can use mine. </b>
+
+--
 
 ### Make sure to update your Hardhat configuration and create a .env file, You can refer to the example .env file provided and make the necessary updates to your own .env file and the Hardhat configuration file based on your network specifications.
 
@@ -61,6 +63,8 @@ Make a copy of env_example named .env.
     cp env_example .env
 
 You can also modify any of the optional environment variables if you'd wish, but the defaults should work perfectly well.
+
+--
 
 ### Hardhat Config
 
@@ -76,7 +80,8 @@ You will get the ETHERSCAN API KEY from etherscan.io, for which you need to log 
 
 You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Infura. You have the option to create an API key from Alchemy based on your network preferences by visiting https://dashboard.alchemy.com/. Moreover, you can also use Alchemy's "faucet" feature to get test Ether for your Goerli network or other network. </span>
 
-<p> PRIVATE_KEY </p>: <span> You can obtain your private key from your public address in MetaMask.
+<p> PRIVATE_KEY </p>: 
+<span> You can obtain your private key from your public address in MetaMask. <span>
 
 #### Then, Test your Smart contract
 
@@ -92,10 +97,9 @@ You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Inf
 
 ---
 
-<h1> Ethereum Network <h1>
-<h2> Add Network Network in MetaMask <h2>
+## Add Ethereum Network into Metamask
 
-# -------- Testnet Network --------
+### Test Network 
 
     Metamask Network Parameters
     Network Name: Goerli test network
@@ -104,19 +108,19 @@ You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Inf
     Currency Symbol: GoerliETH
     Block Explorer URL: https://goerli.etherscan.io
 
-# Deploy:
+### Deploy:
 
     npx hardhat run --network goerli scripts/deploy.ts
 
-# Verify:
+### Verify:
 
     npx hardhat verify --network goerli <token.address>
 
 ---
 
-Polygon Network
+## Add Polygon Network into Metamask
 
-# -------- Testnet Network --------
+### Testnet Network
 
     Metamask Network Parameters
 
@@ -129,7 +133,7 @@ Polygon Network
 Deploy: npx hardhat run --network polygon_mumbai scripts/deploy.ts
 Verify: npx hardhat verify --network polygon_mumbai <token.address>
 
-# -------- Mainnet Network --------
+### Mainnet Network
 
     Network Name: Polygon Mainnet
     New RPC URL: https://polygon-rpc.com/
@@ -137,5 +141,10 @@ Verify: npx hardhat verify --network polygon_mumbai <token.address>
     Currency Symbol: MATIC
     Block Explorer URL: https://polygonscan.com/
 
-Deploy: npx hardhat run --network matic scripts/deploy.ts
-Verify: npx hardhat verify --network matic <token.address>
+### Deploy 
+    
+    npx hardhat run --network matic scripts/deploy.ts
+
+### Verify
+    
+    npx hardhat verify --network matic <token.address>
