@@ -1,49 +1,84 @@
-If you are setting up by cloning, please remove the "@nomicfoundation/hardhat-toolbox" and "@typechain/hardhat" packages from the package.json because they might not install correctly due to different package versions. After removing them, make sure to add "--force install" at the end to forcefully install all the packages.
+## Simply Setup Hardhat
+
+    These packages will help you in both small and large projects. They will assist you in testing, generating code coverage, determining contract size, and calculating contract gas fees/prices in USD.
+
+    If you are setting up by cloning, please remove the "@nomicfoundation/hardhat-toolbox" and "@typechain/hardhat" packages from the package.json because they might not install correctly due to different package versions. After removing them, make sure to add "--force install" at the end to forcefully install all the packages. </p>
 
 ---
 
-These packages will help you in both small and large projects. They will assist you in testing, generating code coverage, determining contract size, and calculating contract gas fees/prices in USD.
+## Installation and Setup Instructions
 
-<h1> If you want to set up the app from scratch, follow these steps: </h1>
+### If you want to set up the hardhat through Clone: follow these steps-
 
-# Install Packages with Latest Version of Hardhat and Openzeppelin
+<b> Install All Packages: </b>
 
-<b> Create Package.json file </b>
+    npm install --save
+
+<b> Update Important Packages like: Hardhat and Openzeppelin: </b>
+
+    npm install --save-dev hardhat  @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades
+
+### If you want to set up the hardhat from scratch, follow these steps-
+
+<b> Open Terminal, Where you want to Setup </b>
+In the place of <folder_name> give any name as you want
+
+    mkdir <folder_name>
+    cd <folder_name>
+
+<b> Create Package.json file in Created folder </b>
 
     npm init -y
 
-<b> Or Clean Cache </b>
+<b> Or Clean Cache (optional) </b>
 
     npm cache clean --force
 
-<b> Dependencies </b>
+<b> Install Dependencies Packages </b>
+I have already mentioned the versions of some packages which versions I am going to use like `ethers ^5.6.9`. Because some packages are dependent on other packages.
 
-    npm install --save
-    
-    npm install --save-dev hardhat  @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades
+So make sure to check your package's compatibility with other packages and use the version as needed.
 
-    npm install --save @openzeppelin/contracts
+    npm i --save-dev @nomicfoundation/hardhat-chai-matchers@1.0.4 @nomicfoundation/hardhat-network-helpers @nomiclabs/hardhat-ethers@2.2.3 @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-solhint @nomiclabs/hardhat-waffle @typechain/ethers-v5@7.2.0 @typechain/hardhat@2.3.1 @types/chai @types/mocha @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser hardhat chai chai-bignumber chai-bn dotenv eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise ethereum-waffle ethers@5.6.9 hardhat-contract-sizer hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage ts-node typechain@5.2.0 typescript@5.1.6
 
----
+    npm install --save @openzeppelin/contracts @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades@1.28.0
 
-
-# For Hardhat Setps
+<b> For Hardhat Setps: <b>
 
     npx hardhat
 
-<b> Choose script, I choose Typescript </b>
+<b> Choose script, _I choose Typescript_ </b>
 <b> Add .git ignore </b>
-<b> No need to install hardhat-toolbox, we already install </b>
+<b> No need to install hardhat-toolbox, or ignore this package </b>
 
-<h2> you can remove the existing contracts, testing files, and scripts from the project and replace them with your own contracts, tests, and scripts. </h2>
+#### You can remove the existing contracts, testing files, and scripts from the project and replace them with your own contracts, tests, and scripts or you can use mine.
 
-<b> Make sure to update your Hardhat configuration and create a .env file, You can refer to the example .env file provided and make the necessary updates to your own .env file and the Hardhat configuration file based on your network specifications.</b>
+### Make sure to update your Hardhat configuration and create a .env file, You can refer to the example .env file provided and make the necessary updates to your own .env file and the Hardhat configuration file based on your network specifications.
 
-<p> ETHERSCAN_API_KEY </p>: <span> You will get the ETHERSCAN API KEY from etherscan.io, for which you need to log in to etherscan.io. After logging in, go to the "https://etherscan.io/myapikey" website and create your API key there. </span>
-<p> ALCHEMY_GOERLI_API_KEY </p>: <span> You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Infura. You have the option to create an API key from Alchemy based on your network preferences by visiting https://dashboard.alchemy.com/. Moreover, you can also use Alchemy's "faucet" feature to get test Ether for your Goerli network or other network. </span>
-<p> PRIVATE_KEY </p>: <span> You can obtain your private key from your public address in MetaMask. </span>
+<b> Create & Configure .env file: </b>
+Make a copy of env_example named .env.
 
-# Then, Test your Smart contract
+    cp env_example .env
+
+You can also modify any of the optional environment variables if you'd wish, but the defaults should work perfectly well.
+
+### Hardhat Config
+
+In `hardhat.config.ts` file add network with basic some parameter like set url(your network url api key) and private key(which you are using to deploy and verify your smart contract).
+
+Then, Set `ETHERSCAN API KEY`.
+
+#### ETHERSCAN_API_KEY
+
+You will get the ETHERSCAN API KEY from etherscan.io, for which you need to log in to etherscan.io. After logging in, go to the "https://etherscan.io/myapikey" website and create your API key there.
+
+#### ALCHEMY_GOERLI_API_KEY
+
+You can get the ALCHEMY GOERLI API KEY either from Alchemy or create it from Infura. You have the option to create an API key from Alchemy based on your network preferences by visiting https://dashboard.alchemy.com/. Moreover, you can also use Alchemy's "faucet" feature to get test Ether for your Goerli network or other network. </span>
+
+<p> PRIVATE_KEY </p>: <span> You can obtain your private key from your public address in MetaMask.
+
+#### Then, Test your Smart contract
 
     npx hardhat clean
 
@@ -53,7 +88,7 @@ These packages will help you in both small and large projects. They will assist 
 
     npx hardhat coverage
 
-<b> After Successfully run test case you can use this setup as per you code/contract <b>
+<b> After Successfully run test case you can use this network setup as per need <b>
 
 ---
 
@@ -75,7 +110,7 @@ These packages will help you in both small and large projects. They will assist 
 
 # Verify:
 
-     npx hardhat verify --network goerli <token.address>
+    npx hardhat verify --network goerli <token.address>
 
 ---
 
